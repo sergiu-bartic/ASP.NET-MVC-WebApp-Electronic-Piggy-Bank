@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EPB11.Models.SoldModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.venit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.achizitie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moneda)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.venit.SumaTotalaVenituri)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.achizitie.SumaTotalaAchizitii)
+            </td>
+            <td>
+                    @Model.Sum(i=>i.venit.SumaTotalaVenituri-i.achizitie.SumaTotalaAchizitii)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Moneda)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SoldId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SoldId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SoldId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

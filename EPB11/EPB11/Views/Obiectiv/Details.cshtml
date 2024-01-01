@@ -1,0 +1,96 @@
+﻿@model EPB11.Models.ObiectivModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ObiectivModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Denumire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Denumire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descriere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descriere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Unitate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Unitate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PretPerUnitate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PretPerUnitate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SumaTotala)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SumaTotala)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sold.Sold)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sold.SoldId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SumaDeStrans)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SumaDeStrans)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Moneda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Moneda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TimpRamas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TimpRamas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SumaPerTimp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SumaPerTimp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OfflineOnline)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OfflineOnline)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Locatie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Locatie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ObiectivId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

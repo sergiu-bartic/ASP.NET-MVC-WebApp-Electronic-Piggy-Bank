@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPB11", "EPB11\EPB11.csproj", "{77A69247-7A1B-4240-8207-46EA440BD5AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77A69247-7A1B-4240-8207-46EA440BD5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A69247-7A1B-4240-8207-46EA440BD5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A69247-7A1B-4240-8207-46EA440BD5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A69247-7A1B-4240-8207-46EA440BD5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1D2BD94-A18E-4B0A-9125-EFCD67631E13}
+	EndGlobalSection
+EndGlobal

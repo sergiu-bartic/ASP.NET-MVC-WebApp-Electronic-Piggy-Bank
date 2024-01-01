@@ -1,0 +1,98 @@
+﻿@model IEnumerable<EPB11.Models.AchizitieModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Denumire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfflineOnline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locatie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unitate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PretPerUnitate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PretTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SumaTotalaAchizitii)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denumire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descriere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfflineOnline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locatie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unitate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PretPerUnitate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PretTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Moneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumaTotalaAchizitii)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AchizitieId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AchizitieId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AchizitieId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="6">Sumă totală achiziții</th>
+            <th>@Model.Sum(i=>i.PretTotal)</th>
+            <th>Lei</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>

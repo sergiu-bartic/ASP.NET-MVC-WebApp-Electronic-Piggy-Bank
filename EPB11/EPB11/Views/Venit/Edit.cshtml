@@ -1,0 +1,64 @@
+﻿@model EPB11.Models.VenitModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>VenitModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="VenitId" />
+            <div class="form-group">
+                <label asp-for="Denumire" class="control-label"></label>
+                <input asp-for="Denumire" class="form-control" />
+                <span asp-validation-for="Denumire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descriere" class="control-label"></label>
+                <input asp-for="Descriere" class="form-control" />
+                <span asp-validation-for="Descriere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sursa" class="control-label"></label>
+                <input asp-for="Sursa" class="form-control" />
+                <span asp-validation-for="Sursa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Suma" class="control-label"></label>
+                <input asp-for="Suma" class="form-control" />
+                <span asp-validation-for="Suma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moneda" class="control-label"></label>
+                <input asp-for="Moneda" class="form-control" />
+                <span asp-validation-for="Moneda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SumaTotalaVenituri" class="control-label"></label>
+                <input asp-for="SumaTotalaVenituri" class="form-control" />
+                <span asp-validation-for="SumaTotalaVenituri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
